@@ -10,7 +10,11 @@
 #include <stdlib.h>
 
 #ifndef RC_AUTOPILOT_EXT
-#include <linux/gpio.h>
+//sj
+//still can not find gpio.h and donload from github and saved in /usr/include folder
+// https://github.com/torvalds/linux/blob/master/include/uapi/linux/gpio.h
+#include "/usr/include/gpio.h"
+//#include <linux/gpio.h>
 #endif
 
 #include <rc/gpio.h>

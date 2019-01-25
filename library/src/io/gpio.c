@@ -19,9 +19,13 @@
 //
 // Not sure why #include <linux/gpio.h> did not work here after explicitly include
 // the default path /usr/include, so use full path for now.
+//sj
+//still can not find gpio.h and donload from github and saved in /usr/include folder
+// https://github.com/torvalds/linux/blob/master/include/uapi/linux/gpio.h
 #include "/usr/include/linux/gpio.h"
 #else
-#include <linux/gpio.h>
+//#include <linux/gpio.h>
+#include "/usr/include/gpio.h"
 #endif
 
 #include <rc/gpio.h>
