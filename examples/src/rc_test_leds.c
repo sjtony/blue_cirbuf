@@ -10,8 +10,9 @@
 
 #include <stdio.h>
 #include <rc/led.h>
-#include <rc/test.h>
 #include <rc/time.h>
+#include <rc/sj_libcirbuf.h>
+//#include "../../library/include/rc/sj_libcirbuf.h"
 
 #define WAIT_US 500000 // time to light each LED in microseconds
 
@@ -60,7 +61,7 @@ int main() {
 	rc_led_set(RC_LED_BAT100, 0);
 
 	rc_led_cleanup();
-
+/**/
 //sj
 	if (circ_bbuf_push(&my_circ_buf, in_data)) {
 		printf("Out of space in CB\n");
@@ -74,11 +75,11 @@ int main() {
 
 	printf("Push: 0x%x\n", in_data);
 	printf("Pop:  0x%x\n", out_data);
-
+/**/
 	return 0;
 }
 
-
+/*
 
 //#include "circular-byte-buffer.h"
 
@@ -127,3 +128,4 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
 
 
 
+*/
