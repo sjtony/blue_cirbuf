@@ -1,7 +1,7 @@
 /**
  * @file button.c
  */
-
+#define  SJPC
 #include <errno.h>
 #include <stdio.h>
 #include <poll.h>
@@ -13,8 +13,11 @@
 //sj
 //still can not find gpio.h and donload from github and saved in /usr/include folder
 // https://github.com/torvalds/linux/blob/master/include/uapi/linux/gpio.h
+#ifdef SJPC
 #include "/usr/include/gpio.h"
-//#include <linux/gpio.h>
+#else
+#include <linux/gpio.h>
+#endif
 #endif
 
 #include <rc/gpio.h>

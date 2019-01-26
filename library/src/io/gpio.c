@@ -4,7 +4,7 @@
  * @author     James Strawson
  * @date       03/02/2018
  */
-
+#define SJPC
 #include <stdio.h>
 #include <errno.h>
 #include <unistd.h> // for read()
@@ -24,8 +24,11 @@
 // https://github.com/torvalds/linux/blob/master/include/uapi/linux/gpio.h
 #include "/usr/include/linux/gpio.h"
 #else
-//#include <linux/gpio.h>
+#ifdef SJPC
 #include "/usr/include/gpio.h"
+#else
+#include <linux/gpio.h>
+#endif
 #endif
 
 #include <rc/gpio.h>
