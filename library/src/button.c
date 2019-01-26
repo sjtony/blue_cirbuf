@@ -1,7 +1,7 @@
 /**
  * @file button.c
  */
-#define  SJPC
+//#define  SJPC
 #include <errno.h>
 #include <stdio.h>
 #include <poll.h>

@@ -4,7 +4,7 @@
  * @author     James Strawson
  * @date       03/02/2018
  */
-#define SJPC
+//#define SJPC
 #include <stdio.h>
 #include <errno.h>
 #include <unistd.h> // for read()

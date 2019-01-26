@@ -7,7 +7,7 @@ INSTALLNONEXEC	:= install -m 644
 
 all:
 # comment here for the time being by sj
-#	@make -C pru_firmware --no-print-directory
+	@make -C pru_firmware --no-print-directory
 	@make -C library --no-print-directory
 	@make -C examples --no-print-directory
 	@make -C services/rc_battery_monitor --no-print-directory
